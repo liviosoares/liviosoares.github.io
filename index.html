@@ -2,6 +2,228 @@
 layout: default
 title: Livio Soares
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Livio Soares!</h1>
-</div><!-- /.blurb -->
+<div class="row" style="margin-top: 50px;">
+  <div class="col-sm-3">
+    <img class="img-thumbnail" width="200px;"src="/assets/liviosoares.jpg">
+  </div>
+  
+  <div class="col-sm-9">
+    <h2 class="display-4">Livio Soares</h2>
+
+    <div style="margin: 15px 0 0 20px;">
+      <a href="https://github.com/liviosoares"><i class="fa fa-github" aria-hidden="true" style="font-size: 24px; margin-right:10px;"></i> <span class="small"> github.com/liviosoares</span> </a>
+      <br>
+      <a href="https://twitter.com/liviobs"><i class="fa fa-twitter" aria-hidden="true" style="font-size: 24px; margin-right:10px;"></i> <span class="small"> twitter.com/liviobs </span></a>
+      <br>
+      <a href="https://www.linkedin.com/in/liviosoares"><i class="fa fa-linkedin" aria-hidden="true" style="font-size: 24px; margin-right:10px;"></i> <span class="small"> linkedin.com/in/liviosoares </span></a>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="margin: 20px 0 0 0;">
+  <h4 class="display-4" style="font-size:36px;">Summary</h4>
+  <div class="col-12">
+    <p>
+      System software researcher and builder. Lately, I've been working on building large-scale <b>distributed systems</b> for
+      supporting <b>machine learning based cloud services</b>.
+    </p>
+    <p>
+      Currently, I am a Research Staff Member at IBM Watson Group (previouly at IBM Research Center). I work on the <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/concept-insights.html"><b>Watson Concept Insights</b></a> cloud service, having co-founded the research project and later serving as lead software engineer and system architect.
+      <br>
+      I received a PhD in Computer Engineering at the University of Toronto in 2012, advised by <a href="http://www.eecg.toronto.edu/~stumm/">Prof Michael Stumm</a>. For my PhD, I invented and developed mechanisms to improve the performance of network and I/O applications, operating systems and runtime systems.
+    </p>
+  </div>
+
+  <div class="col-12">
+    <h4 class="display-4" style="font-size:36px;">Projects</h4>
+
+    <h4 class="display-4" style="font-size:20px;"><b>Watson Concept Insights</b> (2013-present)</h4>
+    System architect, lead software engineer and co-founder of “Watson Concept Insights” cloud service. Took the project from a research idea all the way to production. Worked on all aspects of research and development including algorithm and data research, system architecture and development, API design, pricing, dashboard UI, testing, and devops.
+    <br>
+    Resources:
+    <ul>
+      <li><a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/concept-insights.html">Concept Insights service page</a>
+      <li><a href="https://concept-insights-demo.mybluemix.net/">Demo using TED Talks</a></li>
+      <li><a href="https://audio-analysis-application-starter-kit.mybluemix.net/">Demo using performing audio analysis of Youtube videos</a></li>
+      <li><a href="https://www.youtube.com/watch?v=mPwVnowX9cU">How Concept Insights Works Video</a></li>
+    </ul>
+
+    <a data-toggle="collapse" href="#wci-collapse" aria-expanded="false" aria-controls="collapseExample">Click for detailed information</a>
+    <div class="collapse" id="wci-collapse">
+      <ul class="list">
+	<li>System architect, lead engineer and co-founder of "Watson Concept Insights" cloud service.</li>
+	<li>Took the project from a research idea all the way to production. I was involved in all aspects of the project, including algorithm and data research, system architecture and development, API design, pricing, dashboard UI, testing, and devops.</li>
+	<li>Co-authored over 15 patents in the areas related to cognitive computing, information retrieval and graph analysis</li>
+	<li>Designed and developed REST API sustaining over 500,000 API calls per day in production.</li>
+	<li>Developed micro-service based distributed system with over 10 independent services, spanning 100s of machines.</li>
+	<li>Deployed and managed large installations of storage clusters, including Cassandra, MongoDB, Ceph/Rados Object Store and Redis.</li>
+	<li>Developed novel storage library allowing transparent stacking ("union") of distributed object stores, as well as on demand object retrieval for distributed computational kernels.</li>
+	<li>Significant portion of system code written in Go; some portions of algorithmitc kernels in C/C++.</li>
+	<li>Optimized C kernel from over 2 minutes of execution down to under 10 seconds. Optimized conceptual query latencies from over 30 seconds down to under 1 second.</li>
+	<li>Developed monitoring solution of services and machines encompassing metrics, logs and health checks.</li>
+	<li>Service used for ACM’s digital library author recommendation found on papers hosted at dl.acm.org</li>
+	<img class="img-rounded" width="80%" src="/assets/acm-widget.png">
+
+      </ul>
+    </div>
+
+
+    <h4 class="display-4" style="font-size:20px; margin-top:20px;"><b>Service oriented peer-to-peer middleware</b> (2012-2013)</h4> 
+    Researched and prototyped novel peer-to-peer distributed system with the goal of offering core services
+    for the construction of service-oriented applications. The main goal of the project was to produce a suite of tools
+    and micro-services to make it easier for developers to write robust, large distributed applications or cloud services.
+    The project brought together a distributed key-value store with dynamic consistency and availability guarantees,
+    a membership/directory service, a topology aware messaging bus, a deployment system based on Linux containers (LXC),
+    and integrated with monitoring.
+    <br>
+    <a data-toggle="collapse" href="#argos-collapse" aria-expanded="false" aria-controls="collapseExample">Click for detailed information</a>
+    <div class="collapse" id="argos-collapse">
+      <ul class="list">
+	<li>Designed and developed 6 different scale-out peer-to-peer microservices in Go.</li>
+	<li>Designed and developed fully distributed in-memory key-value store with variable consistence and availability guarantees (per-collection). Collections could be configured to use fully consistent (RAFT based consensus), or fully available (peer-to-peer protocol).</li>
+	<li>Designed and developed highly-available distributed DHCP service for dynamically assigning IPs to VMs and containers within a data-center</li>
+	<li>Designed and developed fully distributed (peer-to-peer) membership and directory service for storing cluster and service-level membership information.<li>
+	<li>Designed and developed distributed network monitoring micro-service, allowing clients to query network failures within different regions (machine, rack, zone or data-center)</li>
+	<li>Designed and developed distributed messaging service.</li>
+	<li>Designed and developed distributed deployment system for micro-services using distributed fleet of agents, responsible for launching container or virtual-machine based runtimes (using <b>libvirt</b>).
+      </ul>
+    </div>
+
+    <h4 class="display-4" style="font-size:20px; margin-top:20px;"><b>Cloud management resiliency</b> (2012-2013)</h4>
+    <p>
+      Explored resiliency of cloud management systems, focusing on <a href="https://www.openstack.org/">OpenStack</a>.
+      Developed mechanism for monitoring and tracking distributed requests within OpenStack services. This mechanism was
+      used to log specific distributed flows in the presence of faults or crashes. Extended this basic mechanism to
+      introduce artificial faults at specific events, along with automatically validating expected outputs from specific
+      series of requests.
+    </p>
+    <p>
+      Relevant publications <a href="#pub-14">[14]</a> and <a href="#pub-15">[15]</a>.
+    </p>
+    
+
+    <h4 class="display-4" style="font-size:20px; margin-top:20px;"><b>FlexSC (exception-less system calls)</b> (2010-2011)</h4>
+    <p>
+      Research in the area of operating systems and computer architecture, focusing on run-time performance.
+      Created a novel operating system interface for traditional monolithic kernels (e.g., Linux), called
+      <b>exception-less system calls</b>, that enables applications to communicate with the operating system via
+      asynchronous messages. Created a new POSIX compatible threading library to support multi-threaded server applications
+      to efficiently use exception-less system calls (e.g., Apache, MySQL and BIND).
+      Created a new event-driven library to support explicitly asynchronous application/OS execution, and
+      ported memcached and nginx to this new library. Demonstrated that exception-less system calls leads to efficient
+      execution on multi-core processors.
+    </p>
+    <p>
+      Relevant publications: <a href="#pub-10">[10]</a> and <a href="#pub-11">[11]</a>.
+    </p>
+    
+    <h4 class="display-4" style="font-size:20px; margin-top:20px;"><b>Runtime systems using hardware performance counter</b> (2007-2010)</h4>
+    <p>
+      Created tools for exploring peformance of applications, run-time and operating systems using hardware performance counters.
+      The tooling and analysis I worked on allowed our research group to design novel techniques for improving utilization of processor cache.
+      
+      The technique I pioneered was an operating system based system for improving processor cache performance called
+      <b>"software pollute buffer"</b>. This system profiles application cache performance at run-time, through hardware
+      performance counters, and dynamically remaps application pages with poor cache utilization, using standard page-coloring.
+      I implemented this prototype within the Linux kernel, using the hardware performance counters from a PowerPC processor.
+    </p>
+    <p>
+      Relevant publications: <a href="#pub-7">[7]</a>, <a href="#pub-8">[8]</a>, <a href="#pub-5">[5]</a>, <a href="#pub-6">[6]</a>, <a href="#pub-9">[9]</a> and <a href="#pub-3">[3]</a>.
+    </p>
+
+  </div>
+
+  <div class="col-12" style="margin-top:20px;">
+    <h4 class="display-4" style="font-size:36px;">Publications</h4>
+
+    <ol reversed>
+      <li id="pub-16"><b>Watson Concept Insights: A Conceptual Association Framework</b>
+	<br>Michele M Franceschini, Livio Soares, Luis A Lastras Montaño
+	<br>Proceedings of the 25th International Conference Companion on World Wide Web (<b>Demo WWW 2016</b>)
+      </li>
+
+      <li id="pub-15"><b>On fault resilience of OpenStack</b>
+	<br>Xiaoen Ju, Livio Soares, Kang G Shin, Kyung Dong Ryu, Dilma Da Silva
+	<br>4th ACM Symposium on Cloud Computing (<b>SOCC 2013</b>)
+      </li>
+
+      <li id="pub-14"><b>Towards a Fault-Resilient Cloud Management Stack</b>
+	<br>Xiaoen Ju, Livio Soares, Kang G. Shin, and Kyung Dong Ryu
+	<br>5th USENIX Workshop on Hot Topics in Cloud Computing (<b>HotCloud 2013</b>)
+      </li>
+
+      <li id="pub-13"><b>Pointy: a hybrid pointer prefetcher for managed runtime systems</b>
+	<br>Ioana Burcea, Livio Soares, Andreas Moshovos
+	<br>Proceedings of the 21st international conference on Parallel architectures and compilation techniques, (<b>PACT 2012</b>)
+
+      <li id="pub-12"><b>Mind the gap: reconnecting architecture and OS research</b>
+	<br>Jeffrey C Mogul, Andrew Baumann, Timothy Roscoe, Livio Soares
+	<br>Proceedings of the 13th USENIX conference on Hot topics in Operating Systems (<b>HotOS 2011</b>)
+      </li>
+
+      <li id="pub-11"><b>Exception-less System Calls for Event-driven Servers</b>
+	  <br>Livio Soares, Michael Stumm
+	  <br>Proceedings of the 2011 USENIX Annual Technical Conference (USENIX ATC 2011)
+      </li>
+
+      <li id="pub-10"><b>FlexSC: Flexible System Call Scheduling with Exception-less System Calls</b>
+	<br>Livio Soares, Michael Stumm
+	<br>Proceedings of the 9th USENIX conference on Operating Systems Design and Implementation (<b>OSDI 2010</b>)
+      </li>
+
+      <li id="pub-9"><b>Enhancing operating system support for multicore processors by using hardware performance monitoring</b>
+	<br>Reza Azimi, David K Tam, Livio Soares, Michael Stumm
+	<br>SIGOPS Operating Systems Review, 2009
+      </li>
+
+      <li id="pub-8"><b>RapidMRC: Approximating L2 Miss Rate Curves on Commodity Systems for Online Optimizations</b>
+	<br>David K Tam, Reza Azimi, Livio Soares, Michael Stumm
+	<br>Proceedings of the 14th international conference on Architectural support for programming languages and operating systems (<b>ASPLOS 2009</b>)
+      </li>
+
+      <li id="pub-7"><b>Reducing the harmful effects of last-level cache polluters with an OS-level, software-only pollute buffer</b>
+	<br>Livio Soares, David Tam, Michael Stumm
+	<br>Proceedings of the 41st annual IEEE/ACM International Symposium on Microarchitecture (<b>MICRO 2008</b>)
+      </li>
+
+
+      <li id="pub-6"><b>Experiences understanding performance in a commercial scale-out environment</b>
+	<br>Robert W Wisniewski, Reza Azimi, Mathieu Desnoyers, Maged M Michael, Jose Moreira, Doron Shiloach, Livio Soares
+	<br>Euro-Par 2007 Parallel Processing (<b>EuroPar 2007</b>)
+      </li>
+
+      <li id="pub-5"><b>Managing shared L2 caches on multicore systems in software</b>
+	<br>David Tam, Reza Azimi, Livio Soares, Michael Stumm
+	<br>Workshop on the Interaction between Operating Systems and Computer Architecture (<b>WIOSCA 2007</b>)
+      </li>
+      
+      <li id="pub-4"><b>Experience distributing objects in an SMMP OS</b>
+	<br>Jonathan Appavoo, Dilma Da Silva, Orran Krieger, Marc Auslander, Michal Ostrowski, Bryan Rosenburg, Amos Waterland, Robert W Wisniewski, Jimi Xenidis, Michael Stumm, Livio Soares
+	<br>ACM Transactions on Computer Systems (<b>TOCS</b>) 25(3), 6, ACM, 2007
+      </li>
+	
+      <li id="pub-3"><b>PATH: Page Access Tracking to Improve Memory Management</b>
+	<br>Reza Azimi, Livio Soares, Michael Stumm, Thomas Walsh, Angela Demke Brown
+	<br>Proceedings of the 6th International Symposium on Memory Management (ISMM), pp. 31--42, ACM, 2007
+      </li>
+
+
+      <li id="pub-2"><b>KFS: Exploring Flexibility in File System Design</b>
+	<br>Dilma M da Silva, Livio B Soares, Orran Krieger
+	<br>Brazilian Workshop on Operating Systems (WSO'2004)
+      </li>
+
+      <li id="pub-1"><b>Meta-data Snapshotting: A Simple Mechanism for File System Consistency</b>
+	<br>Livio Soares, Orran Y Krieger, Dilma Da Silva
+	<br>Proceedings of the International Workshop on Storage Network Architecture and Parallel I/Os (<b>SNAPI 2003</b>)
+      </li>
+	
+    </ol>
+
+  </div>
+
+  <div class="row" style="margin-top: 600px;">
+    space left blank.
+  </div>
+  
+</div> <!-- row -->
